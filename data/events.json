@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "id": "camp-1",
+      "title": "Science Camp",
+      "child": "Avery",
+      "start": "2026-06-15T13:00:00.000Z",
+      "end": "2026-06-15T20:00:00.000Z",
+      "location": "Community Center",
+      "notes": "Pack lunch and water"
+    },
+    {
+      "id": "camp-2",
+      "title": "Soccer Clinic",
+      "child": "Jules",
+      "start": "2026-06-17T14:30:00.000Z",
+      "end": "2026-06-17T16:00:00.000Z",
+      "location": "East Field",
+      "notes": "Bring cleats"
+    },
+    {
+      "id": "camp-3",
+      "title": "Art Workshop",
+      "child": "Avery",
+      "start": "2026-07-02T15:00:00.000Z",
+      "end": "2026-07-02T17:00:00.000Z",
+      "location": "Library Room B",
+      "notes": "Wear paint clothes"
+    }
+  ]
+}
