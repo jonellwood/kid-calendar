@@ -71,7 +71,7 @@
         <button type="button" class="secondary" @click="downloadJson">Download JSON</button>
       </div>
 
-      <p class="muted">Changes are saved in your browser. Download JSON to update repository data.</p>
+      <p class="muted">Changes are saved in your browser. Download JSON, replace data/events.json, then build/push.</p>
       <p v-if="status" :class="statusType">{{ status }}</p>
       <p v-if="error" class="error">{{ error }}</p>
     </form>
@@ -308,7 +308,7 @@ function downloadJson() {
   anchor.download = 'events.json';
   anchor.click();
   URL.revokeObjectURL(url);
-  status.value = 'events.json downloaded. Replace data/events.json and commit.';
+  status.value = 'events.json downloaded. Replace data/events.json, then build and commit.';
   statusType.value = 'success';
 }
 

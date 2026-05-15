@@ -32,10 +32,12 @@ SPA redirects for `/admin` are configured in `netlify.toml`.
 
 1. Use `/admin` to edit events.
 2. Click **Download JSON**.
-3. Replace both `data/events.json` and `public/data/events.json` with the downloaded file.
+3. Replace `data/events.json` with the downloaded file.
 4. Commit/push to trigger a Netlify deploy.
+
+`npm run dev` and `npm run build` automatically sync `data/events.json` into `public/data/events.json` before serving/building.
 
 ## Troubleshooting
 
-- Saving in `/admin` updates browser local storage immediately, not repository files. Use **Download JSON** to persist changes into JSON files.
+- Saving in `/admin` updates browser local storage immediately, not repository files. Use **Download JSON** and replace `data/events.json` before building or pushing.
 - If there are no current-month/current-week events, the app opens on the nearest month/week containing events.
