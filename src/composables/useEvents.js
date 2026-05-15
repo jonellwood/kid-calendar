@@ -1,4 +1,5 @@
 import { computed, ref } from 'vue';
+import bundledData from '../../data/events.json';
 
 const STORAGE_KEY = 'kid-calendar-events';
 const events = ref([]);
@@ -34,21 +35,10 @@ async function loadEvents() {
     return;
   }
 
-  try {
-    const response = await fetch('/data/events.json');
-    if (!response.ok) {
-      throw new Error(`Failed to load events.json (${response.status})`);
-    }
-    const json = await response.json();
-    events.value = Array.isArray(json.events) ? json.events : [];
-    persistEvents();
-    initialized.value = true;
-  } catch (err) {
-    events.value = [];
-    error.value = err instanceof Error ? err.message : 'Unable to load events';
-  } finally {
-    loading.value = false;
-  }
+  events.value = Array.isArray(bundledData.events) ? bundledData.events : [];
+  persistEvents();
+  initialized.value = true;
+  loading.value = false;
 }
 
 function upsertEvent(nextEvent) {

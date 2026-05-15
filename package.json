@@ -4,9 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "node scripts/sync-events.mjs",
     "dev": "vite",
-    "prebuild": "node scripts/sync-events.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

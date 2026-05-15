@@ -30,14 +30,18 @@ SPA redirects for `/admin` are configured in `netlify.toml`.
 
 ## Data workflow
 
-1. Use `/admin` to edit events.
-2. Click **Download JSON**.
-3. Replace `data/events.json` with the downloaded file.
-4. Commit/push to trigger a Netlify deploy.
+Events are **bundled into the app at build time** from `data/events.json`. There is no runtime file fetch.
 
-`npm run dev` and `npm run build` automatically sync `data/events.json` into `public/data/events.json` before serving/building.
+1. Use `/admin` to add, edit, or delete events. Changes are saved to browser localStorage instantly.
+2. Click **Download JSON** in the admin toolbar.
+3. Replace `data/events.json` in the repo root with the downloaded file.
+4. `git add data/events.json && git commit -m "update events" && git push`
+5. Netlify runs `npm run build`, which bundles the new `data/events.json` into the app.
+
+**Important:** `data/events.json` is the single source of truth. Netlify always builds from whatever is committed there. Any events you add via `/admin` live only in that browser's localStorage until you download and commit the JSON.
 
 ## Troubleshooting
 
-- Saving in `/admin` updates browser local storage immediately, not repository files. Use **Download JSON** and replace `data/events.json` before building or pushing.
+- Changes in `/admin` update localStorage immediately but are not visible to other devices/browsers until you follow the Data workflow above.
 - If there are no current-month/current-week events, the app opens on the nearest month/week containing events.
+- To reset a browser to the repo's canonical events, clear site data (Application → Storage → Clear site data in DevTools).
