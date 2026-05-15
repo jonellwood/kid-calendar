@@ -4,28 +4,460 @@
       "id": "camp-1",
       "title": "Soccer Camp",
       "child": "Jameson",
-      "start": "2026-06-03T16:00:00.000Z",
-      "end": "2026-06-05T19:00:00.000Z",
+      "start": "2026-06-03T20:00:00.000Z",
+      "end": "2026-06-03T23:00:00.000Z",
       "location": "3000 Mabeline Road",
       "notes": "Soccer Field by ball fields"
     },
     {
-      "id": "camp-2",
-      "title": "Soccer Clinic",
-      "child": "Jules",
-      "start": "2026-06-17T14:30:00.000Z",
-      "end": "2026-06-17T16:00:00.000Z",
-      "location": "East Field",
-      "notes": "Bring cleats"
+      "id": "1778805221078",
+      "title": "Soccer Camp",
+      "child": "Jameson",
+      "start": "2026-06-04T20:00:00.000Z",
+      "end": "2026-06-04T23:00:00.000Z",
+      "location": "3000 Mabeline Road",
+      "notes": "Soccer Field by ball fields"
     },
     {
-      "id": "camp-3",
-      "title": "Art Workshop",
-      "child": "Avery",
-      "start": "2026-07-02T15:00:00.000Z",
-      "end": "2026-07-02T17:00:00.000Z",
-      "location": "Library Room B",
-      "notes": "Wear paint clothes"
+      "id": "1778805312895",
+      "title": "Soccer Camp",
+      "child": "Jameson",
+      "start": "2026-06-05T20:00:00.000Z",
+      "end": "2025-06-05T23:00:00.000Z",
+      "location": "3000 Mabeline Road",
+      "notes": "Soccer Field by ball fields"
+    },
+    {
+      "id": "1778806109401-0-3w6fe0",
+      "title": "Cheer Camp",
+      "child": "Cora",
+      "start": "2026-06-08T13:00:00.000Z",
+      "end": "2026-06-08T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan",
+      "notes": "Gym next to Hanahan City Hall"
+    },
+    {
+      "id": "1778806933861-0-2f8lge",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-06-08T21:15:00.000Z",
+      "end": "2026-06-08T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806109401-1-axde2q",
+      "title": "Cheer Camp",
+      "child": "Cora",
+      "start": "2026-06-09T13:00:00.000Z",
+      "end": "2026-06-09T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan",
+      "notes": "Gym next to Hanahan City Hall"
+    },
+    {
+      "id": "1778806109401-2-my09ma",
+      "title": "Cheer Camp",
+      "child": "Cora",
+      "start": "2026-06-10T13:00:00.000Z",
+      "end": "2026-06-10T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan",
+      "notes": "Gym next to Hanahan City Hall"
+    },
+    {
+      "id": "1778806109401-3-p14nz9",
+      "title": "Cheer Camp",
+      "child": "Cora",
+      "start": "2026-06-11T13:00:00.000Z",
+      "end": "2026-06-11T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan",
+      "notes": "Gym next to Hanahan City Hall"
+    },
+    {
+      "id": "1778806109401-4-8c8y1n",
+      "title": "Cheer Camp",
+      "child": "Cora",
+      "start": "2026-06-12T13:00:00.000Z",
+      "end": "2026-06-12T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan",
+      "notes": "Gym next to Hanahan City Hall"
+    },
+    {
+      "id": "1778806304479-0-wazqbk",
+      "title": "Animal Care Camp",
+      "child": "Cora",
+      "start": "2026-06-15T12:30:00.000Z",
+      "end": "2026-06-15T16:30:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778806627157-0-nmjmyd",
+      "title": "Baseball Camp",
+      "child": "Jameson",
+      "start": "2026-06-15T13:00:00.000Z",
+      "end": "2026-06-15T16:00:00.000Z",
+      "location": "3000 Mabeline Road, Hanahan SC 29410",
+      "notes": "Field 4"
+    },
+    {
+      "id": "1778806933861-1-jap34b",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-06-15T21:15:00.000Z",
+      "end": "2026-06-15T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806304479-1-cvze0e",
+      "title": "Animal Care Camp",
+      "child": "Cora",
+      "start": "2026-06-16T12:30:00.000Z",
+      "end": "2026-06-16T16:30:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778806627157-1-7pz8ry",
+      "title": "Baseball Camp",
+      "child": "Jameson",
+      "start": "2026-06-16T13:00:00.000Z",
+      "end": "2026-06-16T16:00:00.000Z",
+      "location": "3000 Mabeline Road, Hanahan SC 29410",
+      "notes": "Field 4"
+    },
+    {
+      "id": "1778806304479-2-zrhf9o",
+      "title": "Animal Care Camp",
+      "child": "Cora",
+      "start": "2026-06-17T12:30:00.000Z",
+      "end": "2026-06-17T16:30:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778806627157-2-4nf8kt",
+      "title": "Baseball Camp",
+      "child": "Jameson",
+      "start": "2026-06-17T13:00:00.000Z",
+      "end": "2026-06-17T16:00:00.000Z",
+      "location": "3000 Mabeline Road, Hanahan SC 29410",
+      "notes": "Field 4"
+    },
+    {
+      "id": "1778806627157-3-old4ql",
+      "title": "Baseball Camp",
+      "child": "Jameson",
+      "start": "2026-06-18T13:00:00.000Z",
+      "end": "2026-06-18T16:00:00.000Z",
+      "location": "3000 Mabeline Road, Hanahan SC 29410",
+      "notes": "Field 4"
+    },
+    {
+      "id": "1778806933861-2-4z1bli",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-06-22T21:15:00.000Z",
+      "end": "2026-06-22T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778807065536-0-udq0sb",
+      "title": "Vet Camp",
+      "child": "Jameson",
+      "start": "2026-06-29T12:30:00.000Z",
+      "end": "2026-06-29T19:00:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778807162336-0-03oyei",
+      "title": "Art Camp",
+      "child": "Cora",
+      "start": "2026-06-29T13:00:00.000Z",
+      "end": "2026-06-29T16:00:00.000Z",
+      "location": "1177 Williams Lane, Hanahan SC 29410",
+      "notes": "In multi purpose Room"
+    },
+    {
+      "id": "1778806933861-3-sdto5q",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-06-29T21:15:00.000Z",
+      "end": "2026-06-29T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778807065536-1-56fdkc",
+      "title": "Vet Camp",
+      "child": "Jameson",
+      "start": "2026-06-30T12:30:00.000Z",
+      "end": "2026-06-30T19:00:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778807162336-1-bzb6ql",
+      "title": "Art Camp",
+      "child": "Cora",
+      "start": "2026-06-30T13:00:00.000Z",
+      "end": "2026-06-30T16:00:00.000Z",
+      "location": "1177 Williams Lane, Hanahan SC 29410",
+      "notes": "In multi purpose Room"
+    },
+    {
+      "id": "1778807065536-2-gzc73j",
+      "title": "Vet Camp",
+      "child": "Jameson",
+      "start": "2026-07-01T12:30:00.000Z",
+      "end": "2026-07-01T19:00:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778807162336-2-cposiz",
+      "title": "Art Camp",
+      "child": "Cora",
+      "start": "2026-07-01T13:00:00.000Z",
+      "end": "2026-07-01T16:00:00.000Z",
+      "location": "1177 Williams Lane, Hanahan SC 29410",
+      "notes": "In multi purpose Room"
+    },
+    {
+      "id": "1778807065536-3-1fe694",
+      "title": "Vet Camp",
+      "child": "Jameson",
+      "start": "2026-07-02T12:30:00.000Z",
+      "end": "2026-07-02T19:00:00.000Z",
+      "location": "2455 Remount Road, North Charleston, SC 29406",
+      "notes": ""
+    },
+    {
+      "id": "1778807162336-3-4ogrcq",
+      "title": "Art Camp",
+      "child": "Cora",
+      "start": "2026-07-02T13:00:00.000Z",
+      "end": "2026-07-02T16:00:00.000Z",
+      "location": "1177 Williams Lane, Hanahan SC 29410",
+      "notes": "In multi purpose Room"
+    },
+    {
+      "id": "1778807239625-0-h8pgv7",
+      "title": "Tumble Camp",
+      "child": "Cora",
+      "start": "2026-07-06T13:00:00.000Z",
+      "end": "2026-07-06T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan SC 29410",
+      "notes": "Gym next to City Hall"
+    },
+    {
+      "id": "1778806933861-4-qazen8",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-07-06T21:15:00.000Z",
+      "end": "2026-07-06T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778807239625-1-v8xc31",
+      "title": "Tumble Camp",
+      "child": "Cora",
+      "start": "2026-07-07T13:00:00.000Z",
+      "end": "2026-07-07T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan SC 29410",
+      "notes": "Gym next to City Hall"
+    },
+    {
+      "id": "1778807239625-2-2lr8zg",
+      "title": "Tumble Camp",
+      "child": "Cora",
+      "start": "2026-07-08T13:00:00.000Z",
+      "end": "2026-07-08T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan SC 29410",
+      "notes": "Gym next to City Hall"
+    },
+    {
+      "id": "1778807239625-3-g5g61x",
+      "title": "Tumble Camp",
+      "child": "Cora",
+      "start": "2026-07-09T13:00:00.000Z",
+      "end": "2026-07-09T16:00:00.000Z",
+      "location": "1253 Yeamans Hall Road, Hanahan SC 29410",
+      "notes": "Gym next to City Hall"
+    },
+    {
+      "id": "1778806933861-5-ctxo83",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-07-13T21:15:00.000Z",
+      "end": "2026-07-13T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-6-ovyuxe",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-07-20T21:15:00.000Z",
+      "end": "2026-07-20T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-7-cfxblr",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-07-27T21:15:00.000Z",
+      "end": "2026-07-27T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-8-w9p3it",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-08-03T21:15:00.000Z",
+      "end": "2026-08-03T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-9-q1l1bu",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-08-10T21:15:00.000Z",
+      "end": "2026-08-10T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-10-9za2u2",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-08-17T21:15:00.000Z",
+      "end": "2026-08-17T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-11-z2cb0w",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-08-24T21:15:00.000Z",
+      "end": "2026-08-24T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-12-zy1yvq",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-08-31T21:15:00.000Z",
+      "end": "2026-08-31T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-13-wpeyhl",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-09-07T21:15:00.000Z",
+      "end": "2026-09-07T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-14-a9qfxl",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-09-14T21:15:00.000Z",
+      "end": "2026-09-14T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-15-hom90k",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-09-21T21:15:00.000Z",
+      "end": "2026-09-21T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-16-sy9akc",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-09-28T21:15:00.000Z",
+      "end": "2026-09-28T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-17-ijqqun",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-10-05T21:15:00.000Z",
+      "end": "2026-10-05T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-18-k0p610",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-10-12T21:15:00.000Z",
+      "end": "2026-10-12T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-19-7bzvkt",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-10-19T21:15:00.000Z",
+      "end": "2026-10-19T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-20-ye96p7",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-10-26T21:15:00.000Z",
+      "end": "2026-10-26T22:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-21-6vuzm2",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-11-02T22:15:00.000Z",
+      "end": "2026-11-02T23:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-22-plq0t6",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-11-09T22:15:00.000Z",
+      "end": "2026-11-09T23:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
+    },
+    {
+      "id": "1778806933861-23-1jy9uv",
+      "title": "Gymnatics",
+      "child": "Cora",
+      "start": "2026-11-16T22:15:00.000Z",
+      "end": "2026-11-16T23:15:00.000Z",
+      "location": "519-A North Goose Creek Blvd, Goose Creek, SC 29445",
+      "notes": ""
     }
   ]
 }
