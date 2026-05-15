@@ -1,13 +1,38 @@
 const STORAGE_KEY = 'kid-calendar-events';
 
-async function loadEvents() {
-  const fromStorage = localStorage.getItem(STORAGE_KEY);
-  if (fromStorage) {
-    return JSON.parse(fromStorage);
+function setStatus(message, type = 'muted') {
+  const status = document.getElementById('statusMsg');
+  if (!status) return;
+  status.textContent = message;
+  status.className = type;
+}
+
+function parseStoredEvents(rawValue) {
+  if (!rawValue) return null;
+  try {
+    const parsed = JSON.parse(rawValue);
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
   }
-  const res = await fetch('data/events.json');
-  const json = await res.json();
-  return json.events;
+}
+
+async function loadEvents() {
+  const fromStorage = parseStoredEvents(localStorage.getItem(STORAGE_KEY));
+  if (fromStorage) {
+    return fromStorage;
+  }
+
+  try {
+    const res = await fetch('data/events.json');
+    const json = await res.json();
+    const events = Array.isArray(json.events) ? json.events : [];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(events));
+    return events;
+  } catch {
+    setStatus('Could not load data/events.json. Run this app through a local server and then try again.', 'error');
+    return [];
+  }
 }
 
 function saveEvents(events) {
@@ -62,6 +87,7 @@ function bindForm(events, onChange) {
     }
 
     saveEvents(events);
+    setStatus('Saved to browser storage. Use Download JSON to update data/events.json in the repo.', 'success');
     onChange();
     clearForm();
   });
@@ -76,6 +102,7 @@ function bindForm(events, onChange) {
     a.download = 'events.json';
     a.click();
     URL.revokeObjectURL(url);
+    setStatus('events.json downloaded. Replace data/events.json with this file and commit.', 'success');
   });
 }
 
@@ -117,6 +144,7 @@ function renderList(events, onChange) {
       if (idx < 0) return;
       events.splice(idx, 1);
       saveEvents(events);
+      setStatus('Saved to browser storage. Use Download JSON to persist into the repo file.', 'success');
       onChange();
     });
   });

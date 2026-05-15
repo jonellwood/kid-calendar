@@ -1,5 +1,15 @@
 const STORAGE_KEY = 'kid-calendar-events';
 
+function parseStoredEvents(rawValue) {
+  if (!rawValue) return null;
+  try {
+    const parsed = JSON.parse(rawValue);
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
 function startOfDay(date) {
   const d = new Date(date);
   d.setHours(0, 0, 0, 0);
@@ -21,13 +31,75 @@ function escapeHtml(value) {
 }
 
 async function loadEvents() {
-  const fromStorage = localStorage.getItem(STORAGE_KEY);
+  const fromStorage = parseStoredEvents(localStorage.getItem(STORAGE_KEY));
   if (fromStorage) {
-    return JSON.parse(fromStorage);
+    return fromStorage;
   }
-  const res = await fetch('data/events.json');
-  const json = await res.json();
-  return json.events;
+
+  try {
+    const res = await fetch('data/events.json');
+    const json = await res.json();
+    const events = Array.isArray(json.events) ? json.events : [];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(events));
+    return events;
+  } catch {
+    return [];
+  }
+}
+
+function hasEventsInMonth(events, date) {
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  return events.some((e) => {
+    const eventDate = new Date(e.start);
+    return eventDate.getFullYear() === year && eventDate.getMonth() === month;
+  });
+}
+
+function getDefaultMonthDate(events) {
+  const now = new Date();
+  if (hasEventsInMonth(events, now)) {
+    return now;
+  }
+
+  const upcoming = [...events]
+    .filter((e) => new Date(e.start) >= startOfDay(now))
+    .sort((a, b) => new Date(a.start) - new Date(b.start))[0];
+  if (upcoming) {
+    return new Date(upcoming.start);
+  }
+
+  const first = [...events].sort((a, b) => new Date(a.start) - new Date(b.start))[0];
+  return first ? new Date(first.start) : now;
+}
+
+function getDefaultWeekDate(events) {
+  const now = new Date();
+  const startOfCurrentWeek = new Date(now);
+  startOfCurrentWeek.setDate(now.getDate() - now.getDay());
+  startOfCurrentWeek.setHours(0, 0, 0, 0);
+
+  const endOfCurrentWeek = new Date(startOfCurrentWeek);
+  endOfCurrentWeek.setDate(startOfCurrentWeek.getDate() + 7);
+
+  const hasCurrentWeekEvents = events.some((e) => {
+    const date = new Date(e.start);
+    return date >= startOfCurrentWeek && date < endOfCurrentWeek;
+  });
+
+  if (hasCurrentWeekEvents) {
+    return now;
+  }
+
+  const upcoming = [...events]
+    .filter((e) => new Date(e.start) >= startOfDay(now))
+    .sort((a, b) => new Date(a.start) - new Date(b.start))[0];
+  if (upcoming) {
+    return new Date(upcoming.start);
+  }
+
+  const first = [...events].sort((a, b) => new Date(a.start) - new Date(b.start))[0];
+  return first ? new Date(first.start) : now;
 }
 
 function bindViewButtons() {
@@ -47,10 +119,9 @@ function bindViewButtons() {
   });
 }
 
-function renderMonthView(events) {
+function renderMonthView(events, baseDate = new Date()) {
   const container = document.getElementById('monthView');
   const today = startOfDay(new Date());
-  const baseDate = new Date();
   const year = baseDate.getFullYear();
   const month = baseDate.getMonth();
   const first = new Date(year, month, 1);
@@ -74,12 +145,11 @@ function renderMonthView(events) {
   container.innerHTML = html;
 }
 
-function renderWeekView(events) {
+function renderWeekView(events, baseDate = new Date()) {
   const container = document.getElementById('weekView');
   const today = startOfDay(new Date());
-  const now = new Date();
-  const start = new Date(now);
-  start.setDate(now.getDate() - now.getDay());
+  const start = new Date(baseDate);
+  start.setDate(baseDate.getDate() - baseDate.getDay());
 
   let html = '<div class="card"><h2>This Week</h2><div class="week-grid">';
   for (let i = 0; i < 7; i += 1) {
@@ -121,7 +191,9 @@ function renderAgendaView(events) {
 (async function init() {
   bindViewButtons();
   const events = await loadEvents();
-  renderMonthView(events);
-  renderWeekView(events);
+  const monthDate = getDefaultMonthDate(events);
+  const weekDate = getDefaultWeekDate(events);
+  renderMonthView(events, monthDate);
+  renderWeekView(events, weekDate);
   renderAgendaView(events);
 })();

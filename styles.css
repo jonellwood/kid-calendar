@@ -135,6 +135,14 @@ main {
   color: var(--muted);
 }
 
+.success {
+  color: #166534;
+}
+
+.error {
+  color: #b91c1c;
+}
+
 .admin-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
