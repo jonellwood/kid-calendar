@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kid Calendar Admin</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1>Kid Calendar Admin</h1>
+      <nav class="actions">
+        <a href="index.html" class="admin-link">Back to Calendar</a>
+      </nav>
+    </header>
+
+    <main class="admin-layout">
+      <form id="eventForm" class="card">
+        <h2>Add / Edit Event</h2>
+        <input type="hidden" id="eventId" />
+
+        <label>
+          Title
+          <input id="title" required />
+        </label>
+
+        <label>
+          Child
+          <input id="child" required />
+        </label>
+
+        <label>
+          Start
+          <input id="start" type="datetime-local" required />
+        </label>
+
+        <label>
+          End
+          <input id="end" type="datetime-local" required />
+        </label>
+
+        <label>
+          Location
+          <input id="location" />
+        </label>
+
+        <label>
+          Notes
+          <textarea id="notes" rows="3"></textarea>
+        </label>
+
+        <div class="row">
+          <button type="submit">Save Event</button>
+          <button type="button" id="clearBtn" class="secondary">Clear</button>
+          <button type="button" id="downloadBtn" class="secondary">Download JSON</button>
+        </div>
+      </form>
+
+      <section class="card">
+        <h2>Events</h2>
+        <p class="muted">After editing, download JSON and commit it to trigger Netlify build.</p>
+        <ul id="eventList" class="event-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>
